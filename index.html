@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1xBet Assistant</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #fff;
+      margin: 0; padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #0a7e07;
+      padding: 20px 0;
+    }
+    header img {
+      height: 60px;
+    }
+    h1 {
+      margin: 15px 0;
+      font-size: 2rem;
+      color: #0a7e07;
+    }
+    a.button {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 15px 25px;
+      background: #0a7e07;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #075a04;
+    }
+    section {
+      margin: 25px auto;
+      max-width: 400px;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 7px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+    button.submit-btn {
+      background: #0a7e07;
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+    }
+    button.submit-btn:hover {
+      background: #075a04;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .telegram-btn {
+      background: #0088cc;
+      margin-top: 10px;
+    }
+    .master-agent-btn {
+      background: #ff6f00;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/1xBet_Logo.svg" alt="1xBet Logo" />
+  </header>
+
+  <h1>1xBet Assistant</h1>
+
+  <a href="https://1xbetbd.com/" class="button" target="_blank" rel="noopener noreferrer">1xBet-এ রেজিস্ট্রেশন করুন</a>
+
+  <section>
+    <h2>পেমেন্ট করুন</h2>
+    <p><strong>বিকাশ / নগদ / রকেট নম্বর:</strong></p>
+    <p style="font-size: 1.4rem; font-weight: bold; color: #0a7e07;">01992291331</p>
+    <p>টাকা পাঠানোর পর নিচের ফর্মে আপনার ট্রানজেকশন আইডি দিন</p>
+
+    <form id="transactionForm">
+      <label for="transactionId">ট্রানজেকশন আইডি</label>
+      <input type="text" id="transactionId" name="transactionId" required placeholder="ট্রানজেকশন আইডি লিখুন" />
+      <button type="submit" class="submit-btn">সাবমিট করুন</button>
+    </form>
+
+    <p id="submitMessage" style="margin-top: 15px;"></p>
+  </section>
+
+  <section>
+    <h2>যোগাযোগ করুন</h2>
+    <a href="https://t.me/minhazul99" target="_blank" class="button telegram-btn">টেলিগ্রামে চ্যাট করুন</a>
+    <a href="https://t.me/minhazul99" target="_blank" class="button master-agent-btn">মাস্টার এজেন্ট হতে আবেদন করুন</a>
+  </section>
+
+  <footer>
+    &copy; 2025 1xBet Assistant. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('transactionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const transactionId = document.getElementById('transactionId').value.trim();
+      const messageEl = document.getElementById('submitMessage');
+      if(transactionId.length < 5) {
+        messageEl.style.color = 'red';
+        messageEl.textContent = 'সঠিক ট্রানজেকশন আইডি দিন।';
+        return;
+      }
+      messageE
